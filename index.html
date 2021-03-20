@@ -142,6 +142,7 @@
     <script>
         Blazor.start({
             loadBootResource: function (type, name, defaultUri, integrity) {
+                defaultUri = "https://cdn.jsdelivr.net/gh/checkkeywords/checkkeywords.github.io/"+defaultUri;
                 if (type !== 'dotnetjs' && location.hostname !== 'localhost') {
                     return (async function () {
                         const response = await fetch(defaultUri + '.br', {
